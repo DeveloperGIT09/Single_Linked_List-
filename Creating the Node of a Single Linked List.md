@@ -1,65 +1,77 @@
-Here is your mind map for **Creating the Node of a Single Linked List**:  
+                        🟢 [Creating the Node of a Singly Linked List] 🟢
+                                        │
+        ┌───────────────────────────────┴───────────────────────────────┐
+    🔹 [Introduction]                                              🔹 [Self-Referential Structure]
+        │                                                               │
+    ✅ Node = Fundamental unit of SLL                               ✅ Contains a pointer to the same structure type  
+    ✅ Consists of:                                                 ✅ Example:  
+        📌 Data (value)                                                ```c  
+        📌 Link (pointer)                                              struct abc {  
+    ✅ Implemented using self-referential structures                      struct abc *ptr;  
+        │                                                               };  
+        └──▶ **Example:** `struct node { int data; struct node *link; };`  
 
-```
-                [Creating the Node of a Single Linked List]
-                                │
-        ┌───────────────────────┴───────────────────────┐
-    [Introduction]                                      [Self-Referential Structure]
-        │                                                   │
-    - Node = Fundamental unit of SLL                     - Contains pointer to same structure type
-    - Consists of:                                       - Example:
-        • Data (value)                                       struct abc {
-        • Link (pointer)                                        struct abc *ptr;
-    - Implemented using self-referential structures           };
-        │
-        └──► Example: struct node { int data; struct node *link; };
+                                        │  
+        ┌──────────────────────────────────────────────────────────┐  
+        │             🔹 **Defining a Node in C** 🔹               │  
+        │ ```c                                                   │  
+        │ struct node {                                          │  
+        │     int data;  // Stores actual value                 │  
+        │     struct node *link;  // Points to next node        │  
+        │ };                                                    │  
+        │ ```                                                   │  
+        │ ✅ Self-referential because it contains a pointer to itself. │  
+        └──────────────────────────────────────────────────────────┘  
 
-                                │
-    ┌───────────────────────────────────────────────────────────┐
-    │                   [Defining a Node in C]                  │
-    │   struct node {                                           │
-    │       int data;  // Stores actual value                   │
-    │       struct node *link;  // Points to next node          │
-    │   };                                                      │
-    │   - Self-referential since it contains pointer to itself  │
-    └───────────────────────────────────────────────────────────┘
+                                        │  
+        ┌────────────────────────────────────────────────┐  
+        │         🔹 **Steps to Create a Node** 🔹       │  
+        ├────────────────────────────────────────────────┤  
+        │ 1️⃣ Declare Pointer to struct node             │  
+        │    ```c                                        │  
+        │    struct node *head = NULL;                  │  
+        │    ```                                        │  
+        │ 2️⃣ Allocate Memory Using `malloc`             │  
+        │    ```c                                        │  
+        │    head = (struct node*) malloc(sizeof(struct node)); │  
+        │    ```                                        │  
+        │ 3️⃣ Initialize Node                            │  
+        │    ```c                                        │  
+        │    head->data = 45;                           │  
+        │    head->link = NULL;                         │  
+        │    ```                                        │  
+        │ 4️⃣ Print the Data                             │  
+        │    ```c                                        │  
+        │    printf("%d", head->data);                  │  
+        │    ```                                        │  
+        └────────────────────────────────────────────────┘  
 
-                                │
-        ┌──────────────────────────────────────────┐
-        │       [Steps to Create a Node]           │
-        ├──────────────────────────────────────────┤
-        │ 1. Declare Pointer to struct node        │
-        │    struct node *head = NULL;            │
-        │                                          │
-        │ 2. Allocate Memory Using `malloc`        │
-        │    head = (struct node*) malloc(sizeof(struct node)); │
-        │                                          │
-        │ 3. Initialize Node                        │
-        │    head->data = 45; head->link = NULL;   │
-        │                                          │
-        │ 4. Print the Data                         │
-        │    printf("%d", head->data);             │
-        └──────────────────────────────────────────┘
+                                        │  
+        ┌───────────────────────────────────────────────────────────┐  
+        │                   🔹 **Key Takeaways** 🔹                 │  
+        │ ✅ Self-referential structures enable linked lists.       │  
+        │ ✅ Memory is allocated dynamically using `malloc`.        │  
+        │ ✅ The head pointer is crucial for accessing nodes.       │  
+        │ ✅ Arrow operator (`->`) is used for pointer access.      │  
+        │ ✅ Nodes are lost if pointers are not managed properly.   │  
+        └───────────────────────────────────────────────────────────┘  
 
-                                │
-    ┌───────────────────────────────────────────────────────────┐
-    │                     [Key Takeaways]                      │
-    │  - Self-referential structures enable linked lists.      │
-    │  - Memory is allocated dynamically using `malloc`.       │
-    │  - The head pointer is crucial for accessing nodes.      │
-    │  - Arrow operator (`->`) is used for pointer access.     │
-    │  - Nodes are lost if pointers are not managed properly.  │
-    └───────────────────────────────────────────────────────────┘
+                                        │  
+                                🏁 **[Conclusion]** 🏁  
+                    ✅ A node is created using `struct` & pointers.  
+                    ✅ Dynamic memory allocation is necessary.  
+                    ✅ Understanding pointers is crucial for linked lists.  
 
-                                │
-                         [Conclusion]
-                - A node is created using struct & pointers.
-                - Dynamic memory allocation is necessary.
-                - Understanding pointers is crucial for linked lists.
-```
+---
 
-This mind map captures the essential points in a structured manner. Let me know if you need any modifications! 😊
-**Creating the Node of a Single Linked List**
+### 🎯 **Why This Version?**
+✅ **Structured and clear formatting** – easy to follow  
+✅ **Use of emojis/icons** – makes it engaging  
+✅ **Code snippets for better understanding**  
+✅ **Important concepts highlighted**  
+
+Hope this helps! 🚀 Let me know if you need modifications or an image-based version. 😊
+
 
 ### **Introduction**
 - A **node** is the fundamental building block of a **singly linked list**.
